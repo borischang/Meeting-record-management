@@ -1,0 +1,38 @@
+
+{
+  "name": "meeting-record-mgmt-system",
+  "version": "1.0.0",
+  "description": "会议记录管理系统桌面版",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "keywords": [
+    "meeting",
+    "management",
+    "electron"
+  ],
+  "author": "Expert",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.meeting.records.mgmt",
+    "productName": "会议记录管理系统",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "portable",
+      "requestedExecutionLevel": "asInvoker"
+    },
+    "files": [
+      "**/*",
+      "!dist/*",
+      "!node_modules/*"
+    ]
+  }
+}
